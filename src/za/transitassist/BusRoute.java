@@ -1,4 +1,4 @@
-package za.transitassist;
+package src.za.transitassist;
 
 public class BusRoute {
 
