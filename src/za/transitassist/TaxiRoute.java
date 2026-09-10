@@ -49,7 +49,7 @@ public class TaxiRoute extends TransportRoute{
     public void displayRoute() {
 
         // Display all common route information
-        displayRoute();
+        super.displayRoute();
 
         // Display taxi-specific information
         System.out.println("Taxi Rank : " + taxiRank);
