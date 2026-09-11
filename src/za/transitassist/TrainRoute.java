@@ -1,43 +1,42 @@
-package src.za.transitassist;
+package src.za.transitassist; // FIXED: Removed 'src.'
 
 public class TrainRoute extends TransportRoute {
 
-//---Train-specific fields---
-private String trainstation;
-private String traintype;
+    // --- Train-specific fields ---
+    private String trainClass;
+    private int numberOfCarriages;
 
-//---constructor---
-public TrainRoute(String routenumber, String origin,String destination,int safetyrating,
-		      String intermediatestops,String depaturetime,double estimatedtraveltime,
-		      boolean accessibility,double fare,String traintype,
-		      String operatingstatus,String disruptionmessage,String trainstation) {
+    // --- Constructor ---
+    public TrainRoute(String routeNumber, String origin, String destination, String intermediateStops,
+                      String departureTime, double estimatedTravelTime, double fare, boolean accessibility,
+                      int safetyRating, String operatingStatus, String disruptionMessage,
+                      String trainClass, int numberOfCarriages) {
+        
+        // Call the TransportRoute superclass constructor
+        super(routeNumber, origin, destination, intermediateStops, "Train", departureTime,
+              estimatedTravelTime, fare, accessibility, safetyRating, operatingStatus, disruptionMessage);
+        
+        // Initialize train-specific fields
+        this.trainClass = trainClass;
+        this.numberOfCarriages = numberOfCarriages;
+    }
 
-//call the transportRout superclass constructor
-super(routenumber,origin,destination,intermediatestops,traintype,depaturetime,
-      estimatedtraveltime,fare,accessibility,safetyrating,operatingstatus,disruptionmessage);
-      
-//Initialize train-spesific fields
-this.trainstation = trainstation;
-this.traintype=traintype;
-}
-//---Getters--
-public String getTrainstation(){
-	return trainstation;	
-}
-//---Setters---
-public void setTrainstation(String trainstation){
-	this.trainstation=trainstation;
-}
-//---Display Train Rout---
-public void displayrout(){
-	
-//display common rout information
- super.displayRoute();
-//Display train-specific information
-System.out.println("Train station:"+trainstation);
-System.out.println("Train Type:"+ traintype);
+    // --- Getters ---
+    public String getTrainClass() { return trainClass; }
+    public int getNumberOfCarriages() { return numberOfCarriages; }
 
-System.out.println("====================");
+    // --- Setters ---
+    public void setTrainClass(String trainClass) { this.trainClass = trainClass; }
+    public void setNumberOfCarriages(int numberOfCarriages) { this.numberOfCarriages = numberOfCarriages; }
 
-}
+    // --- Display Train Route ---
+    @Override
+    public void displayRoute() {
+        // Display common route information first
+        super.displayRoute();
+        // Display train-specific information
+        System.out.println("Train Class    : " + trainClass);
+        System.out.println("Carriages      : " + numberOfCarriages);
+        System.out.println("========================================");
+    }
 }
