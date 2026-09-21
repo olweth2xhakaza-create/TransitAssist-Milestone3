@@ -157,7 +157,7 @@ public class Main {
     }
 
     // --- LOCALIZED SAMPLE DATA (KZN / ZULULAND REGION) ---
-    private static void loadSampleData(TransitManager manager) {
+    public static void loadSampleData(TransitManager manager) {
         manager.addRoute(new BusRoute("B01", "Nongoma", "Ulundi", "Umkhuze", "06:00", 60, 45.00, true, 4, "Operating Normally", "", 50, true));
         manager.addRoute(new TaxiRoute("X01", "Hluhluwe", "Mtubatuba", "None", "07:30", 30, 35.00, false, 3, "Operating Normally", "", "Hluhluwe Rank", true));
         manager.addRoute(new BusRoute("B02", "Hlabisa", "Mtubatuba", "Hluhluwe", "08:15", 45, 50.00, true, 3, "Delayed", "Heavy rain on R618", 45, false));
