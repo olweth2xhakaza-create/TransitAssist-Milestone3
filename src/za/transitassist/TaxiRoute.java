@@ -57,4 +57,13 @@ public class TaxiRoute extends TransportRoute{
 
         System.out.println("========================================");
     }
+    
+    // --- MILESTONE 4: Polymorphic method for GUI ---
+    @Override
+    public String getScreenText() {
+        return super.getScreenText() + "\n" +
+               "============================\n" +
+               "Taxi Rank : " + taxiRank + "\n" +
+               "Metered   : " + (metered ? "Yes" : "No");
+    }
 }
