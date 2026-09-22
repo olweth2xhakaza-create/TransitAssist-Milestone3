@@ -32,4 +32,14 @@ public class BusRoute extends TransportRoute {
 		System.out.println("Has Wifi         : " + (hasWifi ? "Yes" : "No"));
 		System.out.println("========================================");
 	}
-}
+	
+	// --- MILESTONE 4: Polymorphic method for GUI ---
+		@Override
+		public String getScreenText() {
+		    return super.getScreenText() + "\n" +
+		           "============================\n" +
+		           "--- Bus Specific ---\n" +
+		           "Seating Capacity : " + seatingCapacity + "\n" +
+		           "Has Wifi         : " + (hasWifi ? "Yes" : "No");
+		}
+	}
