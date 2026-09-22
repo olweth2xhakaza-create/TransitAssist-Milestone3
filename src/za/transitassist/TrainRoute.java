@@ -39,4 +39,13 @@ public class TrainRoute extends TransportRoute {
         System.out.println("Carriages      : " + numberOfCarriages);
         System.out.println("========================================");
     }
+    
+    // --- MILESTONE 4: Polymorphic method for GUI ---
+    @Override
+    public String getScreenText() {
+        return super.getScreenText() + "\n" +
+               "============================\n" +
+               "Train Class    : " + trainClass + "\n" +
+               "Carriages      : " + numberOfCarriages;
+    }
 }
