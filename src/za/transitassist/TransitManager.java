@@ -1,5 +1,7 @@
 package src.za.transitassist;
 
+import src.za.transitassist.TransportRoute;
+
 public class TransitManager {
 
     // --- Data Structure (Array) ---
@@ -93,4 +95,14 @@ public class TransitManager {
         }
         return null; // Not found
     }
-}
+    
+ // --- MILESTONE 4: Getters so the GUI can read the data ---
+    public TransportRoute[] getRoutes() { 
+        return routes; 
+    }
+    
+    public int getRouteCount() { 
+        return routeCount; 
+    }
+  }
+
