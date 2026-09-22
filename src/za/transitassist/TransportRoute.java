@@ -83,4 +83,18 @@ public class TransportRoute {
         }
         System.out.println("========================================");
     }
-}
+ // --- MILESTONE 4: Polymorphic method for GUI ---
+    public String getScreenText() {
+        return "Route Number   : " + routeNumber + "\n" +
+               "Origin         : " + origin + "\n" +
+               "Destination    : " + destination + "\n" +
+               "Stops          : " + intermediateStops + "\n" +
+               "Transport Type : " + transportType + "\n" +
+               "Departure Time : " + departureTime + "\n" +
+               "Travel Time    : " + (int)estimatedTravelTime + " min\n" +
+               "Fare           : R" + fare + "\n" +
+               "Accessible     : " + (accessibility ? "Yes" : "No") + "\n" +
+               "Safety Rating  : " + safetyRating + "/5\n" +
+               "Status         : " + operatingStatus;
+    }
+ }  
